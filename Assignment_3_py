@@ -1,0 +1,43 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NnKuRtsz0Z7P"
+      },
+      "outputs": [],
+      "source": [
+        "import RPi.GPIO as GPIO \n",
+        "from time import sleep \n",
+        "\n",
+        "GPIO.setwarnings(False) \n",
+        "GPIO.setmode(GPIO.BOARD) \n",
+        "GPIO.setup(8, GPIO.OUT, initial=GPIO.LOW)\n",
+        "\n",
+        "\n",
+        "while True: \n",
+        "    print(\"LED & Traffic lights ON!\")\n",
+        "    GPIO.output(8, GPIO.HIGH) \n",
+        "    sleep(2) \n",
+        "    print(\"LED & Traffic lights OFF!\")\n",
+        "    GPIO.output(8, GPIO.LOW) \n",
+        "    sleep(2) "
+      ]
+    }
+  ]
+}
